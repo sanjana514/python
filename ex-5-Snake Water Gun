@@ -1,0 +1,17 @@
+'''this is a very simple game of snake water gun/rock paper scissors,here i am using if,elif statement only ,,
+if u want u can use multiple solutions using functions etc'''
+import random
+computer=random.randint(0,2)
+user=int(input('enter 0 for snake,1 for water,2 for gun:'))
+if(user==computer):
+  print("It's a draw!!")
+elif(user==0 and computer==2):
+  print("You lose!!")
+elif(user==1 and computer==0):
+  print("You lose!!")
+elif(user==2 and computer==1):
+  print("You lose!!")
+else:
+  print("You win!!")
+print('user:' ,user)
+print('computer:',computer)
