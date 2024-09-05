@@ -1,0 +1,33 @@
+# Write a python program to translate a message into secret code language. Use the rules below to translate normal English into secret code language
+
+# Coding:
+# if the word contains atleast 3 characters, remove the first letter and append it at the end
+#   now append three random characters at the starting and the end
+# else:
+#   simply reverse the string
+
+# Decoding:
+# if the word contains less than 3 characters, reverse it
+# else:
+#   remove 3 random characters from start and end. Now remove the last letter and append it to the beginning
+# Your program should ask whether you want to code or decode
+'''This is the simple basic code for this problem without using split ..it is just a simple coding and decoding of a long string not word by word coding/decoding.For word by word coding/decoding we need to do split so see ex-4_2'''
+a=input('enter your msg:')
+choice=input("1 for coding and 2 for decoding: ")
+coding=True if (choice=="1") else False
+print(a)
+print(coding)
+if(coding):
+  if(len(a)>=3):
+    s1='abc'
+    s2='fng'
+    an=s1+a[1:]+a[0]+s2
+    print(an)
+  else:
+    print(a[::-1])
+else:
+  if(len(a)>=3):
+    s=a[3:-3]
+    print(s[-1]+s[:-1])
+  else:
+    print(a[::-1])

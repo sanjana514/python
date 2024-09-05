@@ -1,0 +1,26 @@
+Questions=[["What is the capital of India?","Delhi","Mumbai","Chennai","Kolkata",1],['1+3=?',"4","5","6","7",2],["4+9=?",'13','14','15','16',3],[ "Who is the prime minister of India?","Narendra Modi","Rahul Gandhi","Amit Shah","Arvind Kejriwal",1],['Who is the president of India?','Droupadi Murmu','Ramnath Kovind',"Amit Shah","sheikh hasina",1]]
+levels=[1000,2000,3000,4000,5000]
+money=0
+for i in range(0,len(Questions)):
+  Q=Questions[i]
+  print(f"Here is your Q for Rs.{levels[i]}\n{Q[0]}")
+  print(f"a.{Q[1]}      b.{Q[2]}")
+  print(f"c.{Q[3]}      d.{Q[4]}")
+  reply=int(input("Enter your answer(1-4) or 0 to quit:\n"))
+  if(reply==0):
+    money=0
+    print(f"Your take home money is {money}")
+    break
+  elif(reply==1):
+    print("Correct answer")
+    if(i==1):
+      money=2000
+    elif(i==2):
+      money=3000
+  else:
+    print("Wrong answer")
+    print(f"take home {money}")
+    money=0
+    break
+    
+

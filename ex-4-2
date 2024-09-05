@@ -1,0 +1,28 @@
+#coding decoding,,using split for word by word coding decoding
+a1=input('enter your msg:')
+a2=a1.split(" ")
+choice=input("1 for coding and 2 for decoding: ")
+coding=True if (choice=="1") else False
+print(a2)
+print(coding)
+if(coding):
+  anew=[]
+  for a in a2: 
+    if(len(a)>=3):
+      s1='abc'
+      s2='fng'
+      an=s1+a[1:]+a[0]+s2
+      anew.append(an)
+    else:
+      anew.append(a[::-1])
+  print(" ".join(anew))
+else:
+  anew=[]
+  for a in a2:
+    if(len(a)>=3):
+      s=a[3:-3]
+      an=s[-1]+s[:-1]
+      anew.append(an)
+    else:
+      anew.append(a[::-1])
+  print(" ".join(anew))
