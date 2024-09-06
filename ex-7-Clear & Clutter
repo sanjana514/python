@@ -1,0 +1,24 @@
+'''Q is: Write a program to clear the clutter inside a folder on your computer. 
+You should use os module to rename all the png images from 1.png all the way till n.png
+where n is the number of png files in that folder. Do the same for other file formats. 
+For example:
+sfdsf.png --> 1.png
+vfsf.png --> 2.png
+this.png --> 3.png
+design.png --> 4.png
+name.png --> 5.png'''
+'''here in this file we do work with the clear folder where there are many .png file and others file.
+by this lines we can change the .png file names '''
+import os
+files=os.listdir("clear")
+i=1
+for file in files:
+    if file.endswith(".png"):
+     print(file)
+     os.rename(f"clear/{file}",f"clear/{i}.png")
+     i=i+1
+# we can use this 4lines for rename and for printing files name of clear folder
+# files=os.listdir("clear")
+# for file in files:
+#     print(file)
+# os.rename("clear/file.txt","clear/6.txt")
