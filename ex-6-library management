@@ -1,0 +1,22 @@
+'''Q is: write a library class with no-of-books & books as 2 instance variables.write a prog to create a library
+from this library class & show how you can print all books,add a book & get the num of books using different methods.
+show that your prog dosn't persist the books after the prog is stopped'''
+
+class library:
+  def __init__(self):
+    self.noBooks=0
+    self.books=[]
+  def addbook(self,book):
+      self.books.append(book)
+      self.noBooks=len(self.books)
+  def show(self):
+    print(f"the library has {self.noBooks} books\nthere are the books:")
+    for i, book in enumerate(self.books,start=1):
+      print(f"number{i}: {book}")
+l=library()
+l.addbook("sanjana1")
+l.addbook("sanjana2")
+l.addbook("sanjana3")
+l.addbook("sanjana4")
+l.addbook("sanjana5")
+l.show()
