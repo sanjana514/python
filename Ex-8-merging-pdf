@@ -1,0 +1,16 @@
+# Q is :write a prog to manipulate pdf files using pyPDF. Your prog should be able to merge multiple pdf files into a single pdf.
+# pypdf is a free & open source pure python pdf library capable of  splitting,merging,cropping & transforming the pages of pdf
+# files.It can also add custom data,viewing options & passwords to pdf files.
+# pypdf can retrieve text & metadata from pdfs as well.
+#pic1.pdf, pic2.pdf & pic3.pdf nameer 3ta pdf file ache folder a otak merge kore ekta pdf a kora holo merged-pdf namer.
+
+from PyPDF2 import PdfWriter
+import os
+merger = PdfWriter()
+files=[file for file in os.listdir() if file.endswith(".pdf")]
+
+for pdf in files:
+    merger.append(pdf)
+
+merger.write("merged-pdf.pdf")
+merger.close()
